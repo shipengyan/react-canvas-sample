@@ -1,0 +1,39 @@
+{
+  "name": "react-canvas-sample",
+  "version": "1.0.0",
+  "description": "react canvas sample",
+  "main": "src/index.html",
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-canvas": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.3.2",
+    "brfs": "^1.4.1",
+    "del": "^1.2.1",
+    "envify": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-webpack": "^1.5.0",
+    "hammer-touchemulator": "0.0.2",
+    "linebreak": "^0.3.0",
+    "scroller": "^0.0.1",
+    "webpack": "^1.12.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shipengyan/react-canvas-sample.git"
+  },
+  "keywords": [
+    "react-canvas"
+  ],
+  "author": "shi.pengyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shipengyan/react-canvas-sample/issues"
+  },
+  "homepage": "https://github.com/shipengyan/react-canvas-sample#readme"
+}
