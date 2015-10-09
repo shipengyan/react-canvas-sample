@@ -8,6 +8,7 @@ var webpackConfig = require('./webpack.config.js');
 var config = {
   port: process.env.PORT || 8080,
   reloadPort: process.env.RELOAD_PORT || 35729,
+
   BUILD_DIR: './build'
 };
 
@@ -26,7 +27,7 @@ gulp.task('css', function () {
 gulp.task('build', function () {
   return gulp.src(webpackConfig.entry.index[0])
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest(config.BUILD_DIR));
 });
 
 gulp.task('serve', function () {
