@@ -12,17 +12,20 @@ var HammerTouchEmulator = require('hammer-touchemulator');
 var Item = require('./components/Item');
 var articles = require('./data');
 
-var Surface = ReactCanvas.Surface;
-var ListView = ReactCanvas.ListView;
+var {Surface, ListView, Text, Group} = ReactCanvas;
 
 HammerTouchEmulator();
 
 var App = React.createClass({
 
   render: function () {
+
+    // ListView被下拉时，Text才可以看到，bug？
     var size = this.getSize();
     return (
       <Surface top={0} left={0} width={size.width} height={size.height}>
+        <Text style={this.getTextStyle()}>asdfasdf</Text>
+
         <ListView
           style={this.getListViewStyle()}
           numberOfItemsGetter={this.getNumberOfItems}
@@ -48,12 +51,22 @@ var App = React.createClass({
     return document.getElementById('main').getBoundingClientRect();
   },
 
+
+  getTextStyle: function () {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: 20
+    };
+  },
+
   // ListView
   // ========
 
   getListViewStyle: function () {
     return {
-      top: 0,
+      top: 20,
       left: 0,
       width: window.innerWidth,
       height: window.innerHeight
